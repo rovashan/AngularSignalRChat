@@ -1,0 +1,14 @@
+<div class="login-container">
+  <div class="signin-content">
+    <mat-card>
+      <mat-card-title>Welcome to NgChat</mat-card-title>
+      <mat-card-subtitle>Please enter a username to login</mat-card-subtitle>
+      <mat-card-content>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Username" dividerColor="accent" [(ngModel)]="username" required (keyup.enter)="login()" autofocus>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

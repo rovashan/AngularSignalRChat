@@ -1,0 +1,23 @@
+<div class="chat-container">
+  <mat-card class="main-card">
+    <mat-list class="chat-list">
+      <mat-list-item *ngFor="let chatMessage of chatMessages" [ngClass]="[(chatMessage.username === nick)? 'chat-list-item-me': 'chat-list-item']">
+        <img mat-list-avatar [src]="chatMessage.avatar">
+        <h4 mat-line>
+          <b>{{ chatMessage.username }}</b>
+        </h4>
+        <p mat-line>
+          <span style="white-space:normal"> {{ chatMessage.message }} </span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>
+<div class="chat-footer-container">
+  <mat-form-field class="chat-input">
+    <mat-icon matSuffix>send</mat-icon>
+    <input matInput #inputMessage maxlength="140" placeholder="Type a message" [(ngModel)]="message" (keyup.enter)="sendMessage()"
+      autofocus>
+    <mat-hint align="end">{{message.length}}/140</mat-hint>
+  </mat-form-field>
+</div>
