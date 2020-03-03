@@ -38,8 +38,10 @@ export class ChatComponent implements OnInit {
   }
 
   sendMessage() {
-    this.chatService.sendMessage(this.nick, this.avatar, this.message);
-    this.message = '';
+    if (this.message.length > 0) {
+      this.chatService.sendMessage(this.nick, this.avatar, this.message);
+      this.message = '';
+    }
   }
 
   private getRandomId(): number {

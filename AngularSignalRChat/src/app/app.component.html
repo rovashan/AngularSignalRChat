@@ -1,11 +1,9 @@
 <mat-toolbar color="primary" *ngIf="isLoggedIn()">
   <mat-toolbar-row>
     <mat-icon>comment </mat-icon>
-    <br>
-    <span>NgChat</span>
-    <span class="fill-remaining-space"></span>
-
-    <button mat-button float-right (click)="logout()">
+    <span class="title">AngularChat</span>
+    <span class="fill-space"></span>
+    <button mat-button (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>
       Logout
     </button>

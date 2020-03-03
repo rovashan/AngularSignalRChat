@@ -15,9 +15,9 @@
 </div>
 <div class="chat-footer-container">
   <mat-form-field class="chat-input">
-    <mat-icon matSuffix>send</mat-icon>
+    <mat-icon matSuffix (click)="sendMessage()">send</mat-icon>
     <input matInput #inputMessage maxlength="140" placeholder="Type a message" [(ngModel)]="message" (keyup.enter)="sendMessage()"
-      autofocus>
+      appAutofocus>
     <mat-hint align="end">{{message.length}}/140</mat-hint>
   </mat-form-field>
 </div>

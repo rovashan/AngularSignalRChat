@@ -10,12 +10,14 @@ import { MaterialModule } from './shared/material.module';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './shared/user.service';
 import { ChatService } from './shared/chat.service';
+import { AutofocusDirective } from './shared/autofocus.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
-    LoginComponent
+    LoginComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,

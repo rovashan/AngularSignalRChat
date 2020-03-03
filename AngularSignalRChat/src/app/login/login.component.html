@@ -5,7 +5,7 @@
       <mat-card-subtitle>Please enter a username to login</mat-card-subtitle>
       <mat-card-content>
         <mat-form-field class="full-width-input">
-          <input matInput placeholder="Username" dividerColor="accent" [(ngModel)]="username" required (keyup.enter)="login()" autofocus>
+          <input autofocus matInput placeholder="Username" dividerColor="accent" [(ngModel)]="username" required (keyup.enter)="login()" appAutofocus>
         </mat-form-field>
         <button mat-raised-button color="primary" (click)="login()">Login</button>
       </mat-card-content>

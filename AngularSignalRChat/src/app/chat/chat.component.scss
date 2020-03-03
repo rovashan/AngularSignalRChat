@@ -33,7 +33,7 @@
 
 .chat-footer-container {
     position:fixed;
-    bottom:25px;
+    bottom:5px;
     left:25px;
     right:25px;
 }
@@ -45,4 +45,8 @@
 
 ::ng-deep  .mat-list .mat-list-item{
     height:initial !important;
+}
+
+::ng-deep .mat-icon:hover {
+    cursor: pointer;
 }
